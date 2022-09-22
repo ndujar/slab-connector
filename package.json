@@ -1,8 +1,8 @@
 {
-  "name": "black-dashboard-react",
-  "version": "1.2.1",
+  "name": "slab-connector",
+  "version": "0.1.1",
   "private": true,
-  "homepage": "https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard",
+  "homepage": "https://ndujar.github.io/slab-connector",
   "dependencies": {
     "@fortawesome/fontawesome-free": "6.1.1",
     "bootstrap": "4.5.3",
@@ -20,6 +20,8 @@
     "sass": "1.53.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
     "test": "react-scripts test --env=jsdom",
@@ -47,6 +49,7 @@
     "typescript": "4.7.4"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-append-prepend": "1.0.9"
   }
