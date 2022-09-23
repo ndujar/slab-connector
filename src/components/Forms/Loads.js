@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // reactstrap components
 import {
-  Table,
   Row,
   Col,
   Input,
@@ -18,7 +17,6 @@ class Loads extends Component {
 
   onInputchange(event) {
     this.props.childToParent(event);
-    console.log(event.target.value)
   }
   
 
@@ -26,7 +24,6 @@ class Loads extends Component {
   
     return (
         <div>
-          <Table>
             <CardHeader>
               <Row>
                 <h5 className="card-category">Cargas</h5>
@@ -41,7 +38,7 @@ class Loads extends Component {
                       <Input
                         name="Pforjado"
                         defaultValue={this.props.Pforjado}
-                        type="float"
+                        type="number"
                         onChange={this.onInputchange}
                       />
                     </label>
@@ -54,7 +51,7 @@ class Loads extends Component {
                       <Input
                         name="Pcm"
                         defaultValue={this.props.Pcm}
-                        type="float"
+                        type="number"
                         onChange={this.onInputchange}
                       />
                     </label>  
@@ -67,7 +64,7 @@ class Loads extends Component {
                         <Input
                           name="Puso"
                           defaultValue={this.props.Puso}
-                          type="float"
+                          type="number"
                           onChange={this.onInputchange}
                         />
                       </label>
@@ -75,12 +72,6 @@ class Loads extends Component {
                 </Col>
               </Row>
             </CardHeader>  
-  
-        
-          </Table>
-        <div>
-          
-        </div>
         </div>
     );
   }

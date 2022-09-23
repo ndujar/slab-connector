@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // reactstrap components
 import {
-  Table,
   Input,
   Row,
   Col,
@@ -18,7 +17,6 @@ class Geometry extends Component {
 
   onInputchange(event) {
     this.props.childToParent(event);
-    console.log(event.target.value)
   }
   
 
@@ -37,9 +35,9 @@ class Geometry extends Component {
                   <label>
                   Espesor Capa Compresion (Ecc):
                   <Input
+                    type='number'
                     name="Ecc"
                     defaultValue={this.props.Ecc}
-                    type="float"
                     onChange={this.onInputchange}
                   />
                   </label>  
@@ -52,7 +50,7 @@ class Geometry extends Component {
                   <Input
                     name="Lvig"
                     defaultValue={this.props.Lvig}
-                    type="float"
+                    type="number"
                     onChange={this.onInputchange}
                   />
                   </label>
@@ -63,7 +61,7 @@ class Geometry extends Component {
                   <Input
                     name="Bvig"
                     defaultValue={this.props.Bvig}
-                    type="float"
+                    type="number"
                     onChange={this.onInputchange}
                   />
                   </label>
@@ -74,7 +72,7 @@ class Geometry extends Component {
                   <Input
                     name="Hvig"
                     defaultValue={this.props.Hvig}
-                    type="float"
+                    type="number"
                     onChange={this.onInputchange}
                   />
                   </label>
@@ -85,7 +83,7 @@ class Geometry extends Component {
                   <Input
                     name="Svig"
                     defaultValue={this.props.Svig}
-                    type="float"
+                    type="number"
                     onChange={this.onInputchange}
                   />
                   </label>
@@ -99,7 +97,7 @@ class Geometry extends Component {
                     <Input
                       name="Dcon"
                       defaultValue={this.props.Dcon}
-                      type="float"
+                      type="number"
                       onChange={this.onInputchange}
                     />
                     </label>  
@@ -110,7 +108,7 @@ class Geometry extends Component {
                     <Input
                       name="Smin"
                       defaultValue={this.props.Smin}
-                      type="float"
+                      type="number"
                       onChange={this.onInputchange}
                     />
                     </label>  
@@ -121,7 +119,7 @@ class Geometry extends Component {
                     <Input
                       name="Smax"
                       defaultValue={this.props.Smax}
-                      type="float"
+                      type="number"
                       onChange={this.onInputchange}
                     />
                     </label>  
@@ -132,7 +130,7 @@ class Geometry extends Component {
                     <Input
                       name="Hcon"
                       defaultValue={this.props.Hcon}
-                      type="float"
+                      type="number"
                       onChange={this.onInputchange}
                     />
                     </label>  
@@ -143,7 +141,7 @@ class Geometry extends Component {
                     <Input
                       name="Pcon"
                       defaultValue={this.props.Pcon}
-                      type="float"
+                      type="number"
                       onChange={this.onInputchange}
                     />
                     </label>  
@@ -151,9 +149,6 @@ class Geometry extends Component {
               </Col>
             </Row>
           </CardHeader>  
-        <div>
-          
-        </div>
         </div>
     );
   }

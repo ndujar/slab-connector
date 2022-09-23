@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // reactstrap components
 import {
-  Table,
   Row,
   Col,
   Input,
@@ -18,7 +17,6 @@ class MaterialProperties extends Component {
 
   onInputchange(event) {
     this.props.childToParent(event);
-    console.log(event.target.value)
   }
   
 
@@ -26,7 +24,6 @@ class MaterialProperties extends Component {
   
     return (
         <div>
-          <Table>
             <CardHeader>
               <Row>
                 <h5 className="card-category">Propiedades de los materiales</h5>
@@ -41,7 +38,7 @@ class MaterialProperties extends Component {
                       <Input
                         name="fck"
                         defaultValue={this.props.fck}
-                        type="float"
+                        type="number"
                         onChange={this.onInputchange}
                       />
                     </label>
@@ -67,7 +64,7 @@ class MaterialProperties extends Component {
                         <Input
                           name="fyk"
                           defaultValue={this.props.fyk}
-                          type="float"
+                          type="number"
                           onChange={this.onInputchange}
                         />
                       </label>
@@ -75,12 +72,6 @@ class MaterialProperties extends Component {
                 </Col>
               </Row>
             </CardHeader>  
-  
-        
-          </Table>
-        <div>
-          
-        </div>
         </div>
     );
   }

@@ -74,12 +74,12 @@ class Dashboard extends Component {
 
   }
 
+ 
+
   childToParent(e) {
-    console.log(e)
-      this.setState({
+    this.setState({
       [e.target.name]: e.target.value
     });
-    console.log(this.state)
   }
 
   render() {
@@ -98,7 +98,6 @@ class Dashboard extends Component {
               </Card>
             </Col>
           </Row>
-
           <Row>
             <Col xs="12">
               <Card className="card-chart">

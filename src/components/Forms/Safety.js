@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // reactstrap components
 import {
-  Table,
   Row,
   Col,
   CardHeader,
@@ -18,7 +17,6 @@ class MaterialProperties extends Component {
 
   onInputchange(event) {
     this.props.childToParent(event);
-    console.log(event.target.value)
   }
   
 
@@ -26,7 +24,6 @@ class MaterialProperties extends Component {
   
     return (
         <div>
-          <Table>
             <CardHeader>
               <Row>
                 <h5 className="card-category">Coeficientes de Seguridad</h5>
@@ -41,7 +38,7 @@ class MaterialProperties extends Component {
                       <Input
                         name="gammaG"
                         defaultValue={this.props.gammaG}
-                        type="float"
+                        type="number"
                         onChange={this.onInputchange}
                       />
                     </label>
@@ -52,7 +49,7 @@ class MaterialProperties extends Component {
                       <Input
                         name="gammaQ"
                         defaultValue={this.props.gammaQ}
-                        type="float"
+                        type="number"
                         onChange={this.onInputchange}
                       />
                     </label>
@@ -66,7 +63,7 @@ class MaterialProperties extends Component {
                       <Input
                         name="gammaV"
                         defaultValue={this.props.gammaV}
-                        type="float"
+                        type="number"
                         onChange={this.onInputchange}
                       />
                     </label>
@@ -77,7 +74,7 @@ class MaterialProperties extends Component {
                       <Input
                         name="gammaC"
                         defaultValue={this.props.gammaC}
-                        type="float"
+                        type="number"
                         onChange={this.onInputchange}
                       />
                     </label>
@@ -89,7 +86,7 @@ class MaterialProperties extends Component {
                         title="Madera"
                         name="gammaM"
                         defaultValue={this.props.gammaM}
-                        type="float"
+                        type="number"
                         onChange={this.onInputchange}
                       />
                     </label>
@@ -100,7 +97,7 @@ class MaterialProperties extends Component {
                       <Input
                         name="gammaS"
                         defaultValue={this.props.gammaS}
-                        type="float"
+                        type="number"
                         onChange={this.onInputchange}
                       />
                     </label>
@@ -108,12 +105,6 @@ class MaterialProperties extends Component {
                 </Col>
               </Row>
             </CardHeader>  
-  
-        
-          </Table>
-        <div>
-          
-        </div>
         </div>
     );
   }
