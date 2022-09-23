@@ -21,6 +21,7 @@ import MaterialProperties from "components/Forms/MaterialProperties";
 import Geometry from "components/Forms/Geometry";
 import Loads from "components/Forms/Loads";
 import Safety from "components/Forms/Safety";
+import CrossSection from "components/Drawings/CrossSection";
 
 // reactstrap components
 import {
@@ -127,8 +128,19 @@ class Dashboard extends Component {
                       Smax={this.state.Smax}
                       Hcon={this.state.Hcon}
                       Pcon={this.state.Pcon}
-                      
-                      childToParent={this.childToParent}/>                
+                      childToParent={this.childToParent}/> 
+     
+                <CrossSection Ecc={this.state.Ecc}
+                      Lvig={this.state.Lvig}
+                      Bvig={this.state.Bvig}
+                      Hvig={this.state.Hvig}
+                      Svig={this.state.Svig}
+                      Dcon={this.state.Dcon}
+                      Smin={this.state.Smin}
+                      Smax={this.state.Smax}
+                      Hcon={this.state.Hcon}
+                      Pcon={this.state.Pcon} 
+                      /> 
               </Card>
             </Col>
           </Row>

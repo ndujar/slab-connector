@@ -17,7 +17,9 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "^5.0.1",
     "reactstrap": "8.7.1",
-    "sass": "1.53.0"
+    "sass": "1.53.0",
+    "react-konva": "18.2.1",
+    "konva": "8.3.12"
   },
   "scripts": {
     "predeploy": "npm run build",
