@@ -34,7 +34,7 @@ class MaterialProperties extends Component {
                   <CardTitle tag="h2">Mayoracion</CardTitle>
                   <Row>
                     <label>
-                      Acciones Permanentes: 
+                      Acciones Permanentes
                       <Input
                         name="gammaG"
                         defaultValue={this.props.gammaG}
@@ -45,7 +45,7 @@ class MaterialProperties extends Component {
                   </Row>
                   <Row>
                     <label>
-                      Acciones Variables: 
+                      Acciones Variables
                       <Input
                         name="gammaQ"
                         defaultValue={this.props.gammaQ}
@@ -59,7 +59,7 @@ class MaterialProperties extends Component {
                   <CardTitle tag="h2">Minoracion</CardTitle>   
                   <Row>
                     <label>
-                      Elementos de union:   
+                      Elementos de union
                       <Input
                         name="gammaV"
                         defaultValue={this.props.gammaV}
@@ -70,7 +70,7 @@ class MaterialProperties extends Component {
                   </Row>
                   <Row>
                     <label>
-                      Hormigon:   
+                      Hormigon
                       <Input
                         name="gammaC"
                         defaultValue={this.props.gammaC}
@@ -81,7 +81,7 @@ class MaterialProperties extends Component {
                   </Row>
                   <Row>
                     <label>
-                      Madera:   
+                      Madera
                       <Input
                         title="Madera"
                         name="gammaM"
@@ -93,7 +93,7 @@ class MaterialProperties extends Component {
                   </Row>
                   <Row>
                     <label>
-                      Pernos:   
+                      Pernos
                       <Input
                         name="gammaS"
                         defaultValue={this.props.gammaS}

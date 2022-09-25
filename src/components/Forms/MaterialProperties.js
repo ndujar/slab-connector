@@ -34,7 +34,7 @@ class MaterialProperties extends Component {
                   <CardTitle tag="h2">Hormigon</CardTitle>
                   <Row>
                     <label>
-                      fck = 
+                      Resistencia Característica
                       <Input
                         name="fck"
                         defaultValue={this.props.fck}
@@ -47,7 +47,7 @@ class MaterialProperties extends Component {
                 <Col>
                   <CardTitle tag="h2">Madera</CardTitle>   
                     <label>
-                      Clase:   
+                      Clase
                       <Input
                         name="ClaseMadera"
                         defaultValue={this.props.ClaseMadera}
@@ -60,7 +60,7 @@ class MaterialProperties extends Component {
                   <CardTitle tag="h2">Pernos</CardTitle>
                     <Row>
                       <label>
-                        fyk = 
+                        Resistencia Característica
                         <Input
                           name="fyk"
                           defaultValue={this.props.fyk}

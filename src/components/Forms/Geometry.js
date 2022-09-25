@@ -33,7 +33,7 @@ class Geometry extends Component {
               <Col>
                 <CardTitle tag="h2">Forjado</CardTitle>   
                   <label>
-                  Espesor Capa Compresion (Ecc):
+                  Espesor Capa Compresion (Ecc)
                   <Input
                     type='number'
                     name="Ecc"
@@ -46,7 +46,7 @@ class Geometry extends Component {
                 <CardTitle tag="h2">Viguetas</CardTitle>
                 <Row>
                   <label>
-                  Longitud (L):
+                  Longitud (L)
                   <Input
                     name="Lvig"
                     defaultValue={this.props.Lvig}
@@ -57,7 +57,7 @@ class Geometry extends Component {
                 </Row>
                 <Row>
                   <label>
-                  Base (B):
+                  Base (B)
                   <Input
                     name="Bvig"
                     defaultValue={this.props.Bvig}
@@ -68,7 +68,7 @@ class Geometry extends Component {
                 </Row>
                 <Row>
                   <label>
-                  Altura (H):
+                  Altura (H)
                   <Input
                     name="Hvig"
                     defaultValue={this.props.Hvig}
@@ -79,7 +79,7 @@ class Geometry extends Component {
                 </Row>
                 <Row>
                   <label>
-                  Separacion (S):
+                  Separacion (S)
                   <Input
                     name="Svig"
                     defaultValue={this.props.Svig}
@@ -93,7 +93,7 @@ class Geometry extends Component {
                 <CardTitle tag="h2">Pernos</CardTitle>  
                   <Row> 
                     <label>
-                    Diámetro Conectores (DCon):
+                    Diámetro Conectores (DCon)
                     <Input
                       name="Dcon"
                       defaultValue={this.props.Dcon}
@@ -104,7 +104,7 @@ class Geometry extends Component {
                   </Row>
                   <Row>
                     <label>
-                    Separación en los extremos (Smin):
+                    Separación en los extremos (Smin)
                     <Input
                       name="Smin"
                       defaultValue={this.props.Smin}
@@ -115,7 +115,7 @@ class Geometry extends Component {
                   </Row>
                   <Row>
                     <label>
-                    Separación en el centro (Smax):
+                    Separación en el centro (Smax)
                     <Input
                       name="Smax"
                       defaultValue={this.props.Smax}
@@ -126,7 +126,7 @@ class Geometry extends Component {
                   </Row>
                   <Row>
                     <label>
-                    Altura (Hcon):
+                    Altura (Hcon)
                     <Input
                       name="Hcon"
                       defaultValue={this.props.Hcon}
@@ -137,7 +137,7 @@ class Geometry extends Component {
                   </Row>
                   <Row>
                     <label>
-                    Profundidad (Pcon):
+                    Profundidad (Pcon)
                     <Input
                       name="Pcon"
                       defaultValue={this.props.Pcon}
