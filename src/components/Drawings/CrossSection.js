@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import makerjs, { model, paths, unitType, exporter } from "makerjs";
+import makerjs, { paths, unitType, exporter } from "makerjs";
 import { Button } from "reactstrap";
 
 class CrossSection extends Component {

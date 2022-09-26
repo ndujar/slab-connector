@@ -25,22 +25,9 @@ import CrossSection from "components/Drawings/CrossSection";
 
 // reactstrap components
 import {
-  Button,
   Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  Label,
-  FormGroup,
-  Input,
-  Table,
   Row,
-  Col,
-  UncontrolledTooltip
+  Col
 } from "reactstrap";
 
 class Dashboard extends Component {
