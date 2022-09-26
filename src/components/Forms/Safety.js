@@ -8,7 +8,7 @@ import {
   CardTitle
 } from "reactstrap";
 
-class MaterialProperties extends Component {
+class Safety extends Component {
   constructor(props) {
     super(props);
     this.onInputchange = this.onInputchange.bind(this);
@@ -110,4 +110,4 @@ class MaterialProperties extends Component {
   }
 }
 
-export default MaterialProperties;
+export default Safety;

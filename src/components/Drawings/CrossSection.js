@@ -25,8 +25,10 @@ class CrossSection extends Component {
 
 	drawSvg = (Bvig, Hvig, Svig, Ecc, Dcon, Smin, Smax, Hcon, Pcon, canvasHeight, canvasWidth)=>{
 		const canvasScale = 1/3.78;
-		const scale = 0.5 * canvasWidth / Svig;
+		const scale = 0.4 * canvasWidth / Svig;
 		const margin = 0.02 * canvasHeight;
+		const offsetY = 0.15 * canvasHeight;
+		const offsetX = 0.02 * canvasWidth;
 		const centerX = canvasWidth * 0.5;
 		const centerY = canvasHeight * 0.5;
 
@@ -38,39 +40,55 @@ class CrossSection extends Component {
 				marginBottomLine: new paths.Line([canvasWidth, 0], [0, 0]),
 				
 				// Floor slab
-				line1: new paths.Line([centerX - (margin + (Svig + Bvig) * 0.5) * scale, centerY], 					[centerX + (margin + (Svig + Bvig) * 0.5) * scale, centerY]),
-				line2: new paths.Line([centerX - (margin + (Svig + Bvig) * 0.5) * scale, centerY + Ecc * scale], 	[centerX + (margin + (Svig + Bvig) * 0.5) * scale, centerY + Ecc * scale]),
+				line1: new paths.Line([centerX - (margin + (Svig + Bvig) * 0.5) * scale, offsetY + centerY], 					[centerX + (margin + (Svig + Bvig) * 0.5) * scale, offsetY + centerY]),
+				line2: new paths.Line([centerX - (margin + (Svig + Bvig) * 0.5) * scale, offsetY + centerY + Ecc * scale], 	[centerX + (margin + (Svig + Bvig) * 0.5) * scale, offsetY + centerY + Ecc * scale]),
+				line3: new paths.Line([centerX - (margin + (Svig + Bvig) * 0.5) * scale, offsetY + centerY + (Ecc + margin * 0.5) * scale], 	[centerX - (margin + (Svig + Bvig) * 0.5) * scale, offsetY + centerY - (Ecc + margin) * 0.5 * scale]),
+				line4: new paths.Line([centerX + (margin + (Svig + Bvig) * 0.5) * scale, offsetY + centerY + (Ecc + margin * 0.5) * scale], 	[centerX + (margin + (Svig + Bvig) * 0.5) * scale, offsetY + centerY - (Ecc + margin) * 0.5 * scale]),
 				// // Left beam
-				line3: new paths.Line([centerX - (Svig + Bvig) * 0.5 * scale, centerY], 				[centerX - (Svig + Bvig) * 0.5 * scale, centerY - Hvig * scale]),
-				line4: new paths.Line([centerX - (Svig + Bvig) * 0.5 * scale, centerY - Hvig * scale], 	[centerX - (Svig - Bvig) * 0.5 * scale, centerY - Hvig * scale]),
-				line5: new paths.Line([centerX - (Svig - Bvig) * 0.5 * scale, centerY - Hvig * scale], 	[centerX - (Svig - Bvig) * 0.5 * scale, centerY]),
+				line5: new paths.Line([centerX - (Svig + Bvig) * 0.5 * scale, offsetY + centerY], 				[centerX - (Svig + Bvig) * 0.5 * scale, offsetY + centerY - Hvig * scale]),
+				line6: new paths.Line([centerX - (Svig + Bvig) * 0.5 * scale, offsetY + centerY - Hvig * scale], 	[centerX - (Svig - Bvig) * 0.5 * scale, offsetY + centerY - Hvig * scale]),
+				line7: new paths.Line([centerX - (Svig - Bvig) * 0.5 * scale, offsetY + centerY - Hvig * scale], 	[centerX - (Svig - Bvig) * 0.5 * scale, offsetY + centerY]),
 				// // Right beam
-				line6: new paths.Line([centerX + (Svig + Bvig) * 0.5 * scale, centerY ], 				[centerX + (Svig + Bvig) * 0.5 * scale, centerY - Hvig * scale]),
-				line7: new paths.Line([centerX + (Svig + Bvig) * 0.5 * scale, centerY - Hvig * scale], 	[centerX + (Svig - Bvig) * 0.5 * scale, centerY - Hvig * scale]),
-				line8: new paths.Line([centerX + (Svig - Bvig) * 0.5 * scale, centerY - Hvig * scale], 	[centerX + (Svig - Bvig) * 0.5 * scale, centerY]),			}
+				line8: new paths.Line([centerX + (Svig + Bvig) * 0.5 * scale, offsetY + centerY ], 				[centerX + (Svig + Bvig) * 0.5 * scale, offsetY + centerY - Hvig * scale]),
+				line9: new paths.Line([centerX + (Svig + Bvig) * 0.5 * scale, offsetY + centerY - Hvig * scale], 	[centerX + (Svig - Bvig) * 0.5 * scale, offsetY + centerY - Hvig * scale]),
+				line10: new paths.Line([centerX + (Svig - Bvig) * 0.5 * scale, offsetY + centerY - Hvig * scale], 	[centerX + (Svig - Bvig) * 0.5 * scale, offsetY + centerY]),			}
 		  };
 		
 		section = makerjs.$(section)
 							.scale(canvasScale)
 							.$result;
 
-		var dimensions = {
+		var dimensionsS = {
 			paths: {
-					line1: new paths.Line([centerX - (margin + Svig) * 0.5 * scale, centerY - (Hvig + margin) * scale], [centerX + (margin + Svig) * 0.5 * scale, centerY - (Hvig + margin) * scale]), 
-					line2: new paths.Line([centerX - Svig * 0.5 * scale, centerY - (Hvig + margin * 0.5) * scale], [centerX - Svig * 0.5 * scale, centerY - (Hvig + 1.5 * margin) * scale]), 
-					line3: new paths.Line([centerX + Svig * 0.5 * scale, centerY - (Hvig + margin * 0.5) * scale], [centerX + Svig * 0.5 * scale, centerY - (Hvig + 1.5 * margin) * scale]), 
+					line1: new paths.Line([centerX - (margin + Svig) * 0.5 * scale, offsetY + centerY + margin * 1.5 * scale], [centerX + (margin + Svig) * 0.5 * scale, offsetY + centerY + margin * 1.5 * scale]), 
+					line2: new paths.Line([centerX - Svig * 0.5 * scale, offsetY + centerY + margin  * scale], [centerX - Svig * 0.5 * scale, offsetY + centerY + 2 * margin * scale]), 
+					line3: new paths.Line([centerX + Svig * 0.5 * scale, offsetY + centerY + margin  * scale], [centerX + Svig * 0.5 * scale, offsetY + centerY + 2 * margin * scale]), 
 					}
 		}
 		
-		dimensions = makerjs.$(dimensions)
-							.addCaption('S=' + Svig, [centerX - (margin + Svig * 0.5) * scale, centerY - (Hvig + 2 * margin) * scale], [centerX + (margin + Svig * 0.5) * scale, centerY - (Hvig + 2 * margin) * scale])
+		dimensionsS = makerjs.$(dimensionsS)
+							.addCaption('S=' + Svig, [centerX - (margin + Svig * 0.5) * scale, offsetY + centerY + 2 * margin * scale], [centerX + (margin + Svig * 0.5) * scale, offsetY + centerY + 2 * margin * scale])
 							.scale(canvasScale)
 							.$result;
+
+		var dimensionsB = {
+			paths: {
+					line1: new paths.Line([centerX + (Svig + Bvig + margin) * 0.5 * scale, offsetY + centerY - (Hvig + margin) * scale], 	[centerX + (Svig - Bvig - margin) * 0.5 * scale, offsetY + centerY - (Hvig + margin) * scale]), 
+					line2: new paths.Line([centerX + (Svig + Bvig) * 0.5 * scale, offsetY + centerY - (Hvig + 1.5 * margin)  * scale], 	[centerX + (Svig + Bvig) * 0.5 * scale, offsetY + centerY - (Hvig + 0.5 * margin) * scale]), 
+					line3: new paths.Line([centerX + (Svig - Bvig) * 0.5 * scale, offsetY + centerY - (Hvig + 1.5 * margin)  * scale], 	[centerX + (Svig - Bvig) * 0.5 * scale, offsetY + centerY - (Hvig + 0.5 * margin) * scale]), 
+					}
+		}
+		
+		dimensionsB = makerjs.$(dimensionsB)
+							.addCaption('B=' + Bvig, [centerX +  Svig * 0.5 * scale, offsetY + centerY - (2 * margin + Hvig) * scale], [centerX + Svig * 0.5 * scale, offsetY + centerY - (2 * margin + Hvig) * scale])
+							.scale(canvasScale)
+					.$result;
 
 		var detail = {
 			models: {
 				section: section,
-				dimensions: dimensions
+				dimensionsS: dimensionsS,
+				dimensionsB: dimensionsB
 			}
 		};
 		return detail;
@@ -89,7 +107,7 @@ class CrossSection extends Component {
 		const Pcon = parseFloat(this.props.Pcon)?parseFloat(this.props.Pcon):1;
 		var canvasHeight = this.state.height;
 		var canvasWidth = this.state.width;
-		var textHeight =  0.7 * canvasWidth / Svig;
+		var textHeight =  0.5 * canvasWidth / Svig;
 
 		const mod = this.drawSvg(Bvig, Hvig, Svig, Ecc, Dcon, Smin, Smax, Hcon, Pcon, canvasHeight, canvasWidth);
 		mod.units = unitType.Millimeter;
@@ -101,7 +119,7 @@ class CrossSection extends Component {
 			const file = new Blob([dxfString], {
 			  type: "text/plain"
 			});
-			console.log(dxfString)
+
 			element.href = URL.createObjectURL(file);
 			element.download = "esquema.dxf";
 			document.body.appendChild(element);

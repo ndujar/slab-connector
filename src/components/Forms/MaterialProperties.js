@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import classesCTE from "assets/tables/classesCTE.json"
+
 // reactstrap components
 import {
   Row,
@@ -21,7 +23,7 @@ class MaterialProperties extends Component {
   
 
   render() {
-  
+
     return (
         <div>
             <CardHeader>
@@ -51,9 +53,13 @@ class MaterialProperties extends Component {
                       <Input
                         name="ClaseMadera"
                         defaultValue={this.props.ClaseMadera}
-                        type="string"
+                        type="select"
                         onChange={this.onInputchange}
-                      />
+                      >
+                        {Array.from(new Map(Object.entries(classesCTE)).keys(), (clase) => {
+                              return <option key={clase}>{clase}</option>
+                        })}
+                      </Input>
                     </label>  
                 </Col>
                 <Col>

@@ -22,6 +22,7 @@ import Geometry from "components/Forms/Geometry";
 import Loads from "components/Forms/Loads";
 import Safety from "components/Forms/Safety";
 import CrossSection from "components/Drawings/CrossSection";
+import Verifications from "components/Forms/Verifications";
 
 // reactstrap components
 import {
@@ -94,6 +95,32 @@ class Dashboard extends Component {
      
               <Card className="card-chart">
                 <Safety 
+                      gammaG={this.state.gammaG}
+                      gammaQ={this.state.gammaQ}
+                      gammaV={this.state.gammaV}
+                      gammaC={this.state.gammaC}
+                      gammaM={this.state.gammaM}
+                      gammaS={this.state.gammaS}
+                      childToParent={this.childToParent}/>                
+              </Card>
+              <Card className="card-chart">
+                <Verifications 
+                      fck={this.state.fck}
+                      fyk={this.state.fyk}
+                      ClaseMadera={this.state.ClaseMadera}
+                      Pforjado={this.state.Pforjado}
+                      Pcm={this.state.Pcm}
+                      Puso={this.state.Puso}
+                      Ecc={this.state.Ecc}
+                      Lvig={this.state.Lvig}
+                      Bvig={this.state.Bvig}
+                      Hvig={this.state.Hvig}
+                      Svig={this.state.Svig}
+                      Dcon={this.state.Dcon}
+                      Smin={this.state.Smin}
+                      Smax={this.state.Smax}
+                      Hcon={this.state.Hcon}
+                      Pcon={this.state.Pcon}
                       gammaG={this.state.gammaG}
                       gammaQ={this.state.gammaQ}
                       gammaV={this.state.gammaV}
