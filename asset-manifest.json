@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/slab-connector/static/css/main.1cc032d9.css",
-    "main.js": "/slab-connector/static/js/main.66fe7764.js",
+    "main.js": "/slab-connector/static/js/main.1882917d.js",
     "static/media/fa-solid-900.ttf": "/slab-connector/static/media/fa-solid-900.e615bbcb258550973c16.ttf",
     "static/media/fa-brands-400.ttf": "/slab-connector/static/media/fa-brands-400.b823fc0dbb5a5f0c21bb.ttf",
     "static/media/fa-solid-900.woff2": "/slab-connector/static/media/fa-solid-900.59edf72a325ac2048d60.woff2",
     "static/media/fa-brands-400.woff2": "/slab-connector/static/media/fa-brands-400.ebb7a127d2d8ee6f1832.woff2",
-    "static/media/emilyz.jpg": "/slab-connector/static/media/emilyz.105ff23d3d4b065ca850.jpg",
     "static/media/fa-regular-400.ttf": "/slab-connector/static/media/fa-regular-400.0d03b1bbd1d62c1e1284.ttf",
     "static/media/react-logo.png": "/slab-connector/static/media/react-logo.561f1671ed326d663356.png",
     "static/media/anime3.png": "/slab-connector/static/media/anime3.4438e5067f2029f9e058.png",
@@ -19,10 +18,10 @@
     "static/media/fa-v4compatibility.woff2": "/slab-connector/static/media/fa-v4compatibility.afac89562a5301459069.woff2",
     "index.html": "/slab-connector/index.html",
     "main.1cc032d9.css.map": "/slab-connector/static/css/main.1cc032d9.css.map",
-    "main.66fe7764.js.map": "/slab-connector/static/js/main.66fe7764.js.map"
+    "main.1882917d.js.map": "/slab-connector/static/js/main.1882917d.js.map"
   },
   "entrypoints": [
     "static/css/main.1cc032d9.css",
-    "static/js/main.66fe7764.js"
+    "static/js/main.1882917d.js"
   ]
 }
